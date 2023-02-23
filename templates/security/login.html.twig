@@ -22,8 +22,6 @@
     <label for="inputPassword"><b>Password</b></label> 
     <input type="password" name="password" placeholder="Password" id="inputPassword" class="form-control" autocomplete="current-password" required>
     <br>
-    <label for="confirmPassword"><b>Confirm Password</b></label>
-    <input type="password" name="password" placeholder="Confirm Password" id="inputPassword" class="form-control" autocomplete="current-password" required>
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
