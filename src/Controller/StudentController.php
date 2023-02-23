@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\StudentmanagementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,11 +10,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class StudentController extends AbstractController
 {
   /**
-   * @Route("Route", name="RouteName")
+   * @Route("/student", name="student_index")
    */
-  public function FunctionName(): Response
+  public function index(StudentmanagementRepository $repo): Response
   {
-      return $this->render('$0.html.twig', []);
+    $student = $repo->findAll();
+            return $this->render('student/index.html.twig', [
+                'student' => $student
+            ]);
   }
 }
 

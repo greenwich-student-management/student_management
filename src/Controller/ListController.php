@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ListController extends AbstractController
 {
     /**
-     * @Route("/list", name="list")
+     * @Route("/liststudent", name="list")
      */
     public function index(Request $request)
     {
@@ -27,7 +27,7 @@ class ListController extends AbstractController
             'Oracle' => '$180.54 billion USD',
         ];
 
-        return $this->render('list/index.html.twig', [
+        return $this->render('home.html.twig', [
             'companies' => $companies,
         ]);
     }
