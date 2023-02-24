@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Studentmanagement;
 use App\Repository\StudentmanagementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -32,6 +33,18 @@ class StudentController extends AbstractController
                 'student' => $student
             ]);
   }
-
+   /**
+     * @Route("/listshow", name="supp_show",methods={"GET"})
+     */
+    public function readOneAction(Studentmanagement $st): Response
+    {
+     
+        $data[]=[
+            'id'=>$st->getId(),
+            'name'=>$st->getFullname(),
+        ];
+       
+       return $this->json($data);
+    }
 }
 

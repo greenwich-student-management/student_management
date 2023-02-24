@@ -41,13 +41,13 @@ class StudentmanagementRepository extends ServiceEntityRepository
        /**
     * @return Studentmanagement[] Returns an array of Studentmanagement objects
     */
-   public function findByExampleField($value): array
+   public function findByType($value): array
    {
        return $this->createQueryBuilder('s')
-           ->andWhere('s.exampleField = :val')
+       ->select('s.id,s.fullname,s.studentcode')
+        //    ->andWhere('s.exampleField = :val')
            ->setParameter('val', $value)
            ->orderBy('s.id', 'ASC')
-           ->setMaxResults(10)
            ->getQuery()
            ->getResult()
        ;
