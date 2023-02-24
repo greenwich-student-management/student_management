@@ -8,11 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SubjectController extends AbstractController
 {
-    #[Route('/subject', name: 'app_subject')]
-    public function index(): Response
-    {
-        return $this->render('subject/index.html.twig', [
-            'controller_name' => 'SubjectController',
-        ]);
-    }
+  /**
+   * @Route("Route", name="RouteName")
+   */
+  public function FunctionName(): Response
+  {
+      return $this->render('$0.html.twig', []);
+  }
 }

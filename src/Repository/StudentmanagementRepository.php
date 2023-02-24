@@ -38,6 +38,20 @@ class StudentmanagementRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
+   /**
+    * @return Studentmanagement[] Returns an array of Studentmanagement objects
+    */
+   public function findByExampleField($value): array
+   {
+       return $this->createQueryBuilder('s')
+           ->andWhere('s.exampleField = :val')
+           ->setParameter('val', $value)
+           ->orderBy('s.id', 'ASC')
+           ->setMaxResults(10)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
 
 //    /**
 //     * @return Studentmanagement[] Returns an array of Studentmanagement objects
