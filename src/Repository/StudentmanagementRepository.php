@@ -38,7 +38,7 @@ class StudentmanagementRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-   /**
+       /**
     * @return Studentmanagement[] Returns an array of Studentmanagement objects
     */
    public function findByExampleField($value): array

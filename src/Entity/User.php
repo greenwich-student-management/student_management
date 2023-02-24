@@ -8,7 +8,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-class User implements UserInterface, App\Entity\PasswordAuthenticatedUserInterface
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -28,7 +28,7 @@ class User implements UserInterface, App\Entity\PasswordAuthenticatedUserInterfa
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $name = null;
+    private ?string $Name = null;
 
     public function getId(): ?int
     {
@@ -121,12 +121,12 @@ class User implements UserInterface, App\Entity\PasswordAuthenticatedUserInterfa
 
     public function getName(): ?string
     {
-        return $this->name;
+        return $this->Name;
     }
 
-    public function setName(string $name): self
+    public function setName(string $Name): self
     {
-        $this->name = $name;
+        $this->Name = $Name;
 
         return $this;
     }

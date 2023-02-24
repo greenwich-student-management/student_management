@@ -2,17 +2,19 @@
 
 namespace App\Controller;
 
+use App\Entity\Scoremanagement;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ScoreController extends AbstractController
 {
-    #[Route('/score', name: 'app_score')]
-    public function index(): Response
+  /**
+     * @Route("/score/{id}", name="FindId")
+     */
+    public function findIdAction(Scoremanagement $score): Response //tim theo id 
     {
-        return $this->render('score/index.html.twig', [
-            'controller_name' => 'ScoreController',
-        ]);
+        return $this->json($score);
     }
+    
 }

@@ -4,20 +4,24 @@ namespace App\Controller;
 
 use App\Repository\StudentmanagementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class StudentController extends AbstractController
 {
-<<<<<<< HEAD
-   /**
-    * @Route("Route", name="RouteName")
-    */
-   public function FunctionName(): Response
-   {
-       return $this->render('$0.html.twig', []);
-   }
-=======
+
+/**
+     * @Route("/image", name="profile")
+     */
+    public function list12(): Response
+    {
+        // return $this-> Json($this->products);
+        $img = "khiem.jpg";  
+        $filename = $this->getParameter('kernel.project_dir').'/public/image/'.$img;
+        return new BinaryFileResponse($filename);
+    }
+
   /**
    * @Route("/student", name="student_index")
    */
@@ -28,6 +32,6 @@ class StudentController extends AbstractController
                 'student' => $student
             ]);
   }
->>>>>>> ac5786f69f08eb7df244a9182313a3cddafa8fab
+
 }
 
