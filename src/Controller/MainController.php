@@ -15,7 +15,7 @@ class MainController extends AbstractController
       $this->repo = $repo;
    }
     /**
-     * @Route("/home", name="homepage")
+     * @Route("/", name="homepage")
      */
     public function indexPageAction(): Response
     {

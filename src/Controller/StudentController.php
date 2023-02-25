@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Studentmanagement;
 use App\Repository\StudentmanagementRepository;
+use StudentType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -28,9 +29,9 @@ class StudentController extends AbstractController
      */
     public function readAllAction(): Response
     {
-        $Students = $this->repo->findAll();
+        $students = $this->repo->findAll();
         return $this->render('student/index.html.twig', [
-            'student'=>$Students
+            'student'=>$students
         ]);
     }
 
@@ -45,7 +46,7 @@ class StudentController extends AbstractController
     }
 
      /**
-     * @Route("/add", name="product_create")
+     * @Route("/add", name="student_create")
      */
     public function createAction(Request $req, SluggerInterface $slugger): Response
     
@@ -57,9 +58,9 @@ class StudentController extends AbstractController
         $form->handleRequest($req);
         if($form->isSubmitted() && $form->isValid())
         {
-            if($s->getCreated()===null){
-                $s->setCreated(new \DateTime());
-            }
+            // if($s->getCreated()===null){
+            //     $s->setCreated(new \DateTime());
+            // }
             $imgFile = $form->get('file')->getData();
             if ($imgFile) {
                 $newFilename = $this->uploadImage($imgFile,$slugger);
@@ -68,13 +69,13 @@ class StudentController extends AbstractController
             $this->repo->save($s,true);
             return $this->redirectToRoute('student_show', [], Response::HTTP_SEE_OTHER);
         }
-        return $this->render("student/home.html.twig",[
+        return $this->render("student/form.html.twig",[
             'form' => $form->createView()
         ]);
     }
 
      /**
-     * @Route("/edit/{id}", name="product_edit",requirements={"id"="\d+"})
+     * @Route("/edit/{id}", name="student_edit",requirements={"id"="\d+"})
      */
     public function editAction(Request $req, Studentmanagement $s,
     SluggerInterface $slugger): Response
@@ -85,9 +86,9 @@ class StudentController extends AbstractController
         $form->handleRequest($req);
         if($form->isSubmitted() && $form->isValid()){
 
-            if($s->getCreated()===null){
-                $s->setCreated(new \DateTime());
-            }
+            // if($s->getCreated()===null){
+            //     $s->setCreated(new \DateTime());
+            // }
             $imgFile = $form->get('file')->getData();
             if ($imgFile) {
                 $newFilename = $this->uploadImage($imgFile,$slugger);
@@ -117,7 +118,7 @@ class StudentController extends AbstractController
     }
 
     /**
-     * @Route("/delete/{id}",name="product_delete",requirements={"id"="\d+"})
+     * @Route("/delete/{id}",name="student_delete",requirements={"id"="\d+"})
      */
     
     public function deleteAction(Request $request, Studentmanagement $s): Response
