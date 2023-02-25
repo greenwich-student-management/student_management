@@ -1,5 +1,5 @@
 <div className="page-heading pb-2 mt-4 mb-2 ">
-                <h3>Manager</h3> <a href="{{path('score_show')}}"><button type="button" class="btn btn-outline-primary">Back to index</button></a>
+                <h3>Manager</h3> <a href="{{path('study_show')}}"><button type="button" class="btn btn-outline-primary">Back to index</button></a>
             </div>
             <div class="page-content mt-4">
                 <div class="card">
@@ -12,8 +12,8 @@
                                     
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="first-name-vertical">Score </label>
-                                                {{ form_widget(form.score, {'attr':{'placeholder':'Score Name'}}) }}
+                                                <label for="first-name-vertical">Term </label>
+                                                {{ form_widget(form.term, {'attr':{'placeholder':'Term Name'}}) }}
                                                 {# <input type="text" id="pname" class="form-control"
                                                     name="Product_Name" placeholder="Product Name"
                                                     value =""> #}
@@ -21,14 +21,21 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="contact-info-vertical">Code</label>
-                                                {{ form_widget(form.student, {'attr':{'placeholder':'Code'}}) }}
+                                                <label for="contact-info-vertical">Part</label>
+                                                {{ form_widget(form.part, {'attr':{'placeholder':'Part'}}) }}
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="first-name-vertical">Subject</label>
                                                 {{ form_widget(form.subject, {'attr':{'placeholder':'Subject'}}) }}
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="first-name-vertical">Class</label>
+                                                {{ form_widget(form.class, {'attr':{'placeholder':'Class'}}) }}
                                                 
                                             </div>
                                         </div>

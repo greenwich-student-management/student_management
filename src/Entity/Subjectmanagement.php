@@ -121,4 +121,8 @@ class Subjectmanagement
 
         return $this;
     }
+    public function __toString()
+    {
+        return $this->subjectcode;
+    }
 }
