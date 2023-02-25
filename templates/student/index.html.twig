@@ -3,18 +3,51 @@
 {% block title %}Hello StudentController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<?php
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Management</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-<div class="example-wrapper">
-    {# <h1>Hello {{ controller_name }}! ✅</h1> #}
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'D:/studentasm/src/Controller/StudentController.php'|file_link(0) }}">src/Controller/StudentController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'D:/studentasm/templates/student/index.html.twig'|file_link(0) }}">templates/student/index.html.twig</a></code></li>
-    </ul>
-</div>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Student Management
+				<form method="get">
+					<input type="text" name="s" class="form-control" style="margin-top: 15px; margin-bottom: 15px;" placeholder="search by name">
+				</form>
+			</div>
+			<div class="panel-body">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Code</th>
+							<th>FullName</th>
+							<th>Email</th>
+                            <th>Image</th>
+                            <th>Class</th>
+							<!-- <a href="Add_Student.html">ADD</a> -->
+							<!-- <td><button class="btn btn-success"href="Add_Student.php">Add</button></td> -->
+							<a class="btn btn-success" href="Add_Student.php">Add</a>
+							<a class="btn btn-success" href="Edit_student.php">Edit</a>
+							<!-- <td><button class="btn btn-warning"href="delete_student.php">Edit</button></td> -->
+							<td><button class="btn btn-danger"href="Delete_student.php">Delete</button></td>
+
+							<!-- <a class="btn btn-success" href="">Edit</a>
+
+                            <a class="btn btn-success" href="">Delele</a> -->
+					</thead>
 {% endblock %}
