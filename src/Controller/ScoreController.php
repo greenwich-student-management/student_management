@@ -97,7 +97,7 @@ class ScoreController extends AbstractController
         ]);
     }
 /**
-     * @Route("/delete/{id}",name="student_delete",requirements={"id"="\d+"})
+     * @Route("/delete/{id}",name="score_delete",requirements={"id"="\d+"})
      */
     
      public function deleteAction(Request $request, Score $sc): Response

@@ -52,7 +52,7 @@
                 <a href="index.html" class="app-brand-link">
                     <a class="navbar-brand mt-2 mt-sm-0 m-auto d-block" href="{{path('homepage')}}">
                         <img
-                        src="https://talent2win.com/wp-content/uploads/2021/09/LogoDefault.png"
+                        src="https://yt3.ggpht.com/a/AGF-l795E5yey_a-wGI4Bk99K7yAzUagO0POa30C4Q=s900-c-k-c0xffffffff-no-rj-mo"
                         height="50px"
                         alt="Logo"
                         loading="lazy"
@@ -68,20 +68,45 @@
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
             <li class="menu-item active">
-              <a href="theme.html" class="menu-link">
+              <a href="#" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
               </a>
             </li>
 
             <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Pages</span>
+              <span class="menu-header-text">All Pages</span>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link menu-toggle">
+              <a href="{{path('student_show')}}" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div>Product</div>
+                <div>Student Management</div>
               </a>
+              <li class="menu-item">
+              <a href="{{path('score_show')}}" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Score Management</div>
+                </a>
+                <li class="menu-item">
+              <a href="{{path('major_show')}}" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Major Management</div>
+                </a>
+                <li class="menu-item">
+              <a href="{{path('class_show')}}" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Classroom Management</div>
+                </a>
+                   <li class="menu-item">
+              <a href="{{path('subject_show')}}" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Subject Management</div>
+                </a>
+                   <li class="menu-item">
+              <a href="{{path('study_show')}}" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Term Management</div>
+                </a>
               {# <ul class="menu-sub">
                 <li class="menu-item">
                   <a href="create.html" class="menu-link">
@@ -139,57 +164,8 @@
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                                <i class="fas fa-user-circle"></i>
-                              <img src="../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-cog me-2"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
+                        <span class="align-middle"><a href="{{ path('app_logout') }}">Log Out</a></span>
                   </ul>
-                </li>
                 <!--/ User -->
               </ul>
             </div>
