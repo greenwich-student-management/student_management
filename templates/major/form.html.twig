@@ -1,5 +1,5 @@
 <div className="page-heading pb-2 mt-4 mb-2 ">
-                <h3>Manager</h3> <a href="{{path('subject_show')}}"><button type="button" class="btn btn-outline-primary">Back to index</button></a>
+                <h3>Manager</h3> <a href="{{path('major_show')}}"><button type="button" class="btn btn-outline-primary">Back to index</button></a>
             </div>
             <div class="page-content mt-4">
                 <div class="card">
@@ -12,8 +12,8 @@
                                     
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="first-name-vertical">Code Subject </label>
-                                                {{ form_widget(form.subjectcode, {'attr':{'placeholder':'Code Subject'}}) }}
+                                                <label for="first-name-vertical">Code Major </label>
+                                                {{ form_widget(form.codemajor, {'attr':{'placeholder':'Code Major'}}) }}
                                                 {# <input type="text" id="pname" class="form-control"
                                                     name="Product_Name" placeholder="Product Name"
                                                     value =""> #}
@@ -21,8 +21,8 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="contact-info-vertical">Name Subject</label>
-                                                {{ form_widget(form.subjectname, {'attr':{'placeholder':'Name Subject'}}) }}
+                                                <label for="contact-info-vertical">Name Major</label>
+                                                {{ form_widget(form.namemajor, {'attr':{'placeholder':'Name Major'}}) }}
                                             </div>
                                         </div>
                                         {# <div class="col-12">
