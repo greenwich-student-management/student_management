@@ -16,6 +16,9 @@ use Symfony\Component\String\Slugger\SluggerInterface;
  * @Route("/Subject")
  */
 class SubjectController extends AbstractController
+/**
+ * @Route("/Subject1")
+ */
 {
   private SubjectmanagementRepository $repo;
   public function __construct(SubjectmanagementRepository $repo)

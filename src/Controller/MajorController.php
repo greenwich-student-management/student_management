@@ -16,6 +16,9 @@ use Symfony\Component\String\Slugger\SluggerInterface;
  * @Route("/Major")
  */
 class MajorController extends AbstractController
+/**
+ * @Route("/Major1")
+ */
 {
     private MajorRepository $repo;
     public function __construct(MajorRepository $repo)
