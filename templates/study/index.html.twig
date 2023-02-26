@@ -21,19 +21,20 @@
                             <th>Part</th>
                             <th>Subject</th>
                             <th>Class</th>
-                            <th>Action</th>
                           </tr>
                         </thead>
                         <tbody class="table-border-bottom-0">
                           {% for stu in study %}
                               <tr>
                                   <td>{{ stu.id}}</td>
-                                  <td>{{ stu.score}}</td>
-                                  <td>{{ stu.student}}</td>
+                                  <td>{{ stu.Term}}</td>
+                                  <td>{{ stu.part }}</td
                                   <td>{{ stu.subject}}</td>
+                                  <td>{{ stu.class }}</td>
+
                                   <td>
-                                    <a href="{{path('score_edit',{'id':stu.id})}}">Edit</a>
-                                    <a href="{{path('score_delete',{'id':stu.id})}}">Delete</a></td>
+                                    <a href="{{path('study_edit',{'id':stu.id})}}">Edit</a>
+                                    <a href="{{path('study_delete',{'id':stu.id})}}">Delete</a></td>
                               </tr>
                           {% endfor %}
                           

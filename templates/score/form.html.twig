@@ -1,3 +1,14 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    {% block stylesheets %}{% endblock %}
+  </head>
+  <body>
 <div className="page-heading pb-2 mt-4 mb-2 ">
                 <h3>Manager</h3> <a href="{{path('score_show')}}"><button type="button" class="btn btn-outline-primary">Back to index</button></a>
             </div>
@@ -13,7 +24,7 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label for="first-name-vertical">Score </label>
-                                                {{ form_widget(form.score, {'attr':{'placeholder':'Score Name'}}) }}
+                                                {{ form_widget(form.score, {'attr':{'placeholder':'Score'}}) }}
                                                 {# <input type="text" id="pname" class="form-control"
                                                     name="Product_Name" placeholder="Product Name"
                                                     value =""> #}
@@ -75,3 +86,7 @@
                     </div> <!--card content-->
                 </div> <!--card-->
             </div><!--page content-->
+            </div>
+    {% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+  </body>
+</html>
