@@ -32,8 +32,8 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="contact-info-vertical">Code</label>
-                                                {{ form_widget(form.student, {'attr':{'placeholder':'Code'}}) }}
+                                                <label for="contact-info-vertical">Student</label>
+                                                {{ form_widget(form.student, {'attr':{'placeholder':'Student'}}) }}
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -47,17 +47,17 @@
                                         {# <div class="col-12">
                                             <div class="form-group">
                                                 <label for="contact-info-vertical">Image</label>
-                                                {{ form_widget(form.image, {'attr':{'placeholder':'0-100'}}) }}
+{{ form_widget(form.image, {'attr':{'placeholder':'0-100'}}) }}
                                             </div>
                                         </div> #}
                                         {# <div class="col-12">
                                             <div class="form-group">
                                                 <label for="image-vertical"> {{ form_label(form.file) }}</label>
                                                
-                                                {{ form_widget(form.file) }} #}
+                                                {{ form_widget(form.file) }}
                                             </div>
                                         </div>
-                                        {# {{ form_widget(form.image) }}
+                                        {{ form_widget(form.image) }}
                                          <div class="pt-3">
                                             {% set img = form.image.vars.value %}
                                                 {% if img %}
