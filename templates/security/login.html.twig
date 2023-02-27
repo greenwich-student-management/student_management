@@ -1,3 +1,4 @@
+
 {% extends 'base.html.twig' %}
 
 {% block title %}Log in!{% endblock %}
@@ -14,17 +15,31 @@
         </div>
     {% endif %}
 
-      <tr style="container-fluid" style="bolder:5px solid #cecece;">
-    <h1 class="h3 mb-3 font-weight-small" style="text-align:center;"><b>Please sign in</b></h1>
-    <label for="inputEmail"><b>Email</b></label>
-    <input type="email" placeholder="Email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus">
-    <br>
-    <label for="inputPassword"><b>Password</b></label> 
-    <input type="password" name="password" placeholder="Password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-    <br>
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+<section class="h-100 gradient-form" style="background-color: #eee;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <div class="text-center ">
+                  <img src="https://tse3.mm.bing.net/th?id=OIP.9zv7sDNL4F4Us1lUP7SIEgHaHa&pid=Api&P=0"
+                    style="width: 250px;" alt="logo">
+                <h4 class="mt-1 mb-5 pb-1">Come to Greenwich University the door of knowledge opens</h4>  
+                </div>
+
+                <h1 class="h3 mb-3 " style="font-weight:bold">Please sign in</h1>
+                <label for="inputEmail" style="font-weight:bold" >Email</label>
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
+                <label for="inputPassword" style="font-weight:bold">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+                >
+
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
         See https://symfony.com/doc/current/security/remember_me.html
@@ -36,8 +51,43 @@
         </div>
     #}
 
-    <button class="btn btn-lg btn-primary" type="submit">
+    <button class="btn btn-lg btn-primary" type="submit"
+        style=" 
+                margin-left: 88px; 
+                height: 60px;
+                text-align: center;
+                margin-top: 20px
+                ">
         Sign in
     </button>
+
+    <div class="d-flex align-items-center justify-content-center pb-4"
+                  style="margin-top: 60px">
+                  <p class="mb-0 me-2">Don't have an account?</p>
+                   
+                    <a class="nav-link" href="{{ path('app_register') }}"
+                    style="
+        
+                            border: solid #89d68c;
+                            border-radius: 10px;
+                            background-color: #89d68c;
+                            margin-left: 5px;
+"
+                    >Create new</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+                  <div class="col-sm-6 px-3 d-none d-sm-block">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.8byXF3vSXAuW2j_ymnbLsAHaJ3&pid=Api&P=0"
+                    alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </form>
 {% endblock %}
