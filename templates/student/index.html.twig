@@ -5,11 +5,20 @@
 
 {% block body %}
   <div className="page-heading pb-2 mt-4 mb-2 ">
-                    <h3>Manager</h3> <a href="{{path('student_create')}}"><button type="button" class="btn btn-outline-primary">Insert</button></a>
-                </div>
+                   <a style="text-decoration:none; color:#FF9900;font-size:40px; " <h3>Student Manager </h3> </a>
+                   </div>
+                    <a href="{{path('student_create')}}"
+                    <button class="btn btn-lg btn-primary" type="button"
+                style=" 
+                margin-left: 50px; 
+                height: 50px;
+                text-align: center;
+                margin-top: 20px">
+                
+                  Insert
+                  </button>
+                  </a>  
                 <div class="page-content">
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-               
                 </div>
                 <div class="card">
                     <div class="container mb-3">
