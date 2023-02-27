@@ -41,7 +41,10 @@
                                   <td>{{ st.fullname}}</td>
                                   <td>{{ st.studentcode}}</td>
                                   <td>{{ st.email}}</td>
-								  <td>{{ st.image}}</td>
+								                  <td>{% set img = st.image %}
+                                      <img src="{{asset('uploads/'~img)}}" height="165"
+                                        class="w-100" />
+                                  </td>
                                   <td>
                                     <a href="{{path('student_edit',{'id':st.id})}}">Edit</a>
                                     <a href="{{path('student_delete',{'id':st.id})}}">Delete</a></td>
