@@ -1,0 +1,42 @@
+{% block body %}
+{% endblock %}
+{% include 'admin.html.twig' %}
+
+
+{# {% block title %}Hello SearchController!{% endblock %} #}
+
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<div class="heading">
+<h4>Student Management</h4>
+</div>
+<div class="btn-show">
+    <div class="add-students">
+        <a href="checkStudent"><button class="add">Add new</button></a>
+        </div>
+        <form class="example1" action="{{path('search')}}">
+        <input type="text" class="searchTerm" placeholder="Search..." name="search">
+        <button type="submit" class="searchButton"><i class="bi bi-search" name="btnsearch"></i></button>
+        </form>
+        </div>
+</div>
+<div class="quantity">number of member: <span style="color:#2C74B3">{{showStudent|length}}</span></div>
+<div class="border-table">
+    <div class="table-responsive">
+    <thead>
+    <tr class="table table-hover align-middle">
+                <th>#<th> 
+                <th>Name<th>
+                <th>Code<th>
+                <th>Email<th>
+                <th>Image<th>
+                <th>Action<th>
+                </tr>
+                </thead>
+                {% for show in showStudent %}
+{% endfor %}
+{# {% end of statement block %} #}
+ {# {% endblock %} #}

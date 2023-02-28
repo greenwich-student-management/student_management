@@ -52,6 +52,24 @@ class StudentmanagementRepository extends ServiceEntityRepository
            ->getResult()
        ;
    }
+    /**
+    * @return Studentmanagement[] Returns an array of Studentmanagement objects
+    */
+   /**
+    * @return Studentmanagement[] Returns an array of Studentmanagement objects
+    */
+    public function searchStudentName($value): array
+    {
+        return $this->createQueryBuilder('s')
+            ->select('s.id,s.fullname,s.studentcode,s.image')
+            
+            ->where('s.fullname LIKE :val')
+            ->setParameter('val', '%'.$value.'%')
+            ->getQuery()
+            ->getArrayResult()
+        ;
+    }
+
 
 //    /**
 //     * @return Studentmanagement[] Returns an array of Studentmanagement objects
